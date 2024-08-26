@@ -1,9 +1,9 @@
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { GoogleLogin } from '@react-oauth/google';
-import { jwtDecode } from "jwt-decode";
-import React, { useState } from 'react';
-import { Modal } from 'react-modal';
+import { jwtDecode } from 'jwt-decode';
+import Modal from 'react-modal';
 
 // Configuração do modal para o elemento root
 Modal.setAppElement('#root');
