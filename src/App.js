@@ -34,6 +34,8 @@ function App() {
               try {
                 // Decodifica o token e obtém as informações
                 const decoded = jwtDecode(credentialResponse?.credential);
+                
+                console.log(decoded)
 
                 // Obtém as informações desejadas do objeto decodificado
                 const user = {
