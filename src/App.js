@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { GoogleLogin } from '@react-oauth/google';
+import { jwtDecode } from "jwt-decode";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         <span>
           <GoogleLogin
             onSuccess={credentialResponse => {
-              console.log(credentialResponse);
+              const decoded = jwtDecode(credentialResponse?.credential)
+              console.log(decoded);
             }}
             onError={() => {
               console.log('Login Failed');
