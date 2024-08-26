@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { GoogleLogin } from '@react-oauth/google';
-import jwtDecode from 'jwt-decode';
+import { jwtDecode } from "jwt-decode";
 
 function App() {
   return (
