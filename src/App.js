@@ -64,10 +64,10 @@ function App() {
         className="Modal"
         overlayClassName="Overlay"
       >
-        <h2>Bem-vindo, {userInfo.name}</h2>
         <div>
           <img src={userInfo.picture} alt="Profile" className="Profile-picture" />
         </div>
+        <h2>Bem-vindo, {userInfo.name}</h2>
         <p>Email: {userInfo.email}</p>
         <button onClick={closeModal}>Fechar</button>
       </Modal>
