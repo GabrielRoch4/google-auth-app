@@ -18,8 +18,13 @@ function App() {
                 // Decodifica o token e obtém as informações
                 const decoded = jwtDecode(credentialResponse?.credential);
 
-                // Exibe um alerta com as informações decodificadas
-                alert(JSON.stringify(decoded, null, 2));
+                // Obtém as informações desejadas do objeto decodificado
+                const name = decoded.name || 'Nome não disponível';
+                const email = decoded.email || 'Email não disponível';
+                const picture = decoded.picture || '';
+
+                // Exibe um alerta com as informações formatadas
+                alert(`Nome: ${name}\nEmail: ${email}\nFoto de perfil: ${picture}`);
               } catch (error) {
                 console.error('Error decoding token:', error);
                 alert('Failed to decode token.');
